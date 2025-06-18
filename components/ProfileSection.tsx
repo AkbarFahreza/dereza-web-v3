@@ -37,7 +37,7 @@ function ProfileSection() {
     fetchCards();
   }, []);
 
-  if (loading) return <div>Loading Waitlist cards...</div>;
+  if (loading) return <div>Loading profile info...</div>;
   if (error) return <div className="text-red-500">Error: {error}</div>;
   console.log(cards);
   return (

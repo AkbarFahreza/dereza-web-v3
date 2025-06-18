@@ -1,3 +1,4 @@
+import Notice from "@/components/Notice";
 import Image from "next/image";
 
 import React from "react";
@@ -91,14 +92,10 @@ function YoutubeChatCSS() {
               Chat from viewer, Moderator, member, and owner
             </p>
           </div>
-
-          <div className="mt-7 py-2 px-3 bg-blue-900/60 border text-blue-200 border-blue-200 rounded-full flex flex-row gap-4 justify-start">
-            <FaInfoCircle className=" text-blue-200 " />
-            <p className="text-xs text-left">
-              You will get : CSS file and PDF for installation guide via Google
-              Drive
-            </p>
-          </div>
+          <Notice
+            type="info"
+            message="You will get : CSS file and PDF for installation guide via Google Drive"
+          />
         </div>
       </div>
     </div>
