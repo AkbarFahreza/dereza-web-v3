@@ -14,6 +14,7 @@
 
   --font-carattere: var(--font-carattere);
   --font-cantata-one: var(--font-cantata-one);
+  --font-calistoga: var(--font-calistoga);
 }
 
 @media (prefers-color-scheme: dark) {

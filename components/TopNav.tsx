@@ -15,7 +15,7 @@ const roboto = Roboto({
 function TopNav() {
   return (
     <ul
-      className={`${roboto.className} hidden lg:flex absolute top-5 left-1/2 -translate-x-1/2  items-center justify-center gap-8 w-full max-w-3xl text-base`}
+      className={`${roboto.className} hidden md:flex absolute top-5 left-1/2 -translate-x-1/2  items-center justify-center gap-8 w-full max-w-3xl text-base`}
     >
       <li>
         <Link href="#">Portfolio</Link>
