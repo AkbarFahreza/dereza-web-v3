@@ -20,7 +20,7 @@ export default function Home() {
         width={649}
         height={611}
         alt="large sparkle decor"
-        className=" fixed -bottom-[140px] -right-[120px]  opacity-5 rotate-[30deg]"
+        className=" fixed -bottom-[140px] -z-50 -right-[120px]  opacity-5 rotate-[30deg]"
       />
       <TopNav />
       <div className="p-4 max-w-[300px] hidden md:block fixed top-28 left-10">
@@ -49,7 +49,7 @@ export default function Home() {
           <div id="pricelist" className="min-h-screen  pt-28">
             <PriceList />
           </div>
-          <div id="term-of-service" className="min-h-screen  pt-28">
+          <div id="term-of-service" className="min-h-screen pt-28">
             <TermOfService />
           </div>
           <div id="portfolio" className="min-h-screen  pt-28">

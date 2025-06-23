@@ -6,7 +6,7 @@ import { PiStarFourFill } from "react-icons/pi";
 
 function TermOfService() {
   return (
-    <div>
+    <div className="min-h-[150vh]">
       <div>
         <p className="relative text-6xl font-carattere text-main before:content-[''] before:absolute before:right-0 before:bottom-1/2 before:-translate-y-1/2 md:before:w-2/5 before:w-1/5 before:h-[2px] before:bg-white">
           Term Of Service
@@ -14,11 +14,13 @@ function TermOfService() {
       </div>
 
       <Notice type="info" message="Last update: 15 June 2025" />
-      <BeforeWeStart />
-      <GeneralTerm />
-      <ProgressTerm />
-      <PaymentTerm />
-      <UsageTerm />
+      <div className="mt-6 md:max-h-[90vh] overflow-y-scroll">
+        <BeforeWeStart />
+        <GeneralTerm />
+        <ProgressTerm />
+        <PaymentTerm />
+        <UsageTerm />
+      </div>
     </div>
   );
 }
@@ -40,9 +42,9 @@ const StartingTerms: StartingTerm[] = [
   "By commissioning me, you accept the terms and conditions below.",
   "All information sent will be kept confidential.",
   {
-    text: "Get the projects example through this link :",
+    text: "Get the projects example ",
     link: {
-      label: "Get here",
+      label: "here",
       href: "https://drive.google.com/drive/folders/1gABlu_fmFgjiwhYvzY2hoqHsTyCVPusg",
     },
   },
@@ -59,18 +61,22 @@ export function BeforeWeStart() {
 
       <ul className="ml-4 mt-3 flex flex-col gap-3">
         {StartingTerms.map((item, idx) => (
-          <li key={idx} className="flex flex-row gap-3 items-center flex-wrap">
+          <li key={idx} className="flex flex-row gap-1 md:gap-3">
             <PiStarFourFill className="scale-75" />
             {typeof item === "string" ? (
-              <p className="text-sm">{item}</p>
+              <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+                {item}
+              </p>
             ) : (
               <>
-                <p className="text-sm">{item.text}</p>
+                <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+                  {item.text}
+                </p>
                 <a
                   href={item.link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-main underline"
+                  className="text-xs md:text-sm text-main underline"
                 >
                   {item.link.label}
                 </a>
@@ -92,7 +98,6 @@ const GeneralTerms: GeneralTerm[] = [
   "I do not provide additional assets for livechat (assets from clients), i only make simple assets, because i am not an artist hehe.",
   "Work estimates can be known after discussion because it depends on the progress currently underway.",
   "Keep in mind that there are several shapes of Livechat design that are quite impossible to code, but i will try my best.",
-  "After the project is complete, you will get installation guide and a .CSS format file which will be sent via Google Drive.",
 ];
 
 export function GeneralTerm() {
@@ -105,9 +110,11 @@ export function GeneralTerm() {
 
       <ul className="ml-4 mt-3 flex flex-col gap-3">
         {GeneralTerms.map((item, idx) => (
-          <li key={idx} className="flex flex-row gap-3 items-top  ">
+          <li key={idx} className="flex flex-row gap-1 md:gap-3 items-top  ">
             <PiStarFourFill className="scale-75 mt-[2px]" />
-            <p className="text-sm max-w-[90%] leading-[150%]">{item}</p>
+            <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+              {item}
+            </p>
           </li>
         ))}
       </ul>
@@ -135,9 +142,11 @@ export function ProgressTerm() {
 
       <ul className="ml-4 mt-3 flex flex-col gap-3">
         {ProgressTerms.map((item, idx) => (
-          <li key={idx} className="flex flex-row gap-3 items-top  ">
+          <li key={idx} className="flex flex-row gap-1 md:gap-3 items-top  ">
             <PiStarFourFill className="scale-75 mt-[2px]" />
-            <p className="text-sm max-w-[90%] leading-[150%]">{item}</p>
+            <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+              {item}
+            </p>
           </li>
         ))}
       </ul>
@@ -166,9 +175,11 @@ export function PaymentTerm() {
 
       <ul className="ml-4 mt-3 flex flex-col gap-3">
         {PaymentTerms.map((item, idx) => (
-          <li key={idx} className="flex flex-row gap-3 items-top  ">
+          <li key={idx} className="flex flex-row gap-1 md:gap-3 items-top  ">
             <PiStarFourFill className="scale-75 mt-[2px]" />
-            <p className="text-sm max-w-[90%] leading-[150%]">{item}</p>
+            <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+              {item}
+            </p>
           </li>
         ))}
       </ul>
@@ -197,9 +208,11 @@ export function UsageTerm() {
 
       <ul className="ml-4 mt-3 flex flex-col gap-3">
         {UsageTerms.map((item, idx) => (
-          <li key={idx} className="flex flex-row gap-3 items-top  ">
+          <li key={idx} className="flex flex-row gap-1 md:gap-3 items-top  ">
             <PiStarFourFill className="scale-75 mt-[2px]" />
-            <p className="text-sm max-w-[90%] leading-[150%]">{item}</p>
+            <p className="text-xs md:text-sm max-w-[90%] leading-[150%]">
+              {item}
+            </p>
           </li>
         ))}
       </ul>

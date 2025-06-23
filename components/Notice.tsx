@@ -34,7 +34,7 @@ const Notice: React.FC<NoticeProps> = ({ type = "info", message }) => {
       className={`mt-7 py-2 px-3 border rounded-full flex flex-row gap-2 justify-start items-center text-xs ${style.container}`}
     >
       {style.icon}
-      <p className="text-left">{message}</p>
+      <p className="text-left text-xs md:text-sm">{message}</p>
     </div>
   );
 };

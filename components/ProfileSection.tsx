@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 type TrelloCard = {
@@ -75,15 +76,33 @@ function ProfileSection() {
         Trakteer goal widgets — beautifully designed and custom-coded just for
         you.
       </p>
-      <div className="flex flex-row gap-x-4 justify-center mt-5">
-        <Image src="/x-icon.svg" width={19} height={17} alt="twitter icon" />
-        <Image src="/kofi-icon.svg" width={25} height={16} alt="ko-fi icon" />
-        <Image
-          src="/trakteer-icon.svg"
-          width={16}
-          height={27}
-          alt="trakteer icon"
-        />
+      <div className="flex flex-row gap-x-4 justify-center items-center mt-5">
+        <Link
+          href="https://x.com/revernry"
+          target="_blank"
+          className="hover:translate-y-[-5px] transition-all duration-200"
+        >
+          <Image src="/x-icon.svg" width={19} height={17} alt="twitter icon" />
+        </Link>
+        <Link
+          href="https://ko-fi.com/arzee"
+          target="_blank"
+          className="hover:translate-y-[-5px] transition-all duration-200"
+        >
+          <Image src="/kofi-icon.svg" width={25} height={16} alt="ko-fi icon" />
+        </Link>
+        <Link
+          href="https://trakteer.id/DekReza"
+          target="_blank"
+          className="hover:translate-y-[-5px] transition-all duration-200"
+        >
+          <Image
+            src="/trakteer-icon.svg"
+            width={16}
+            height={27}
+            alt="trakteer icon"
+          />
+        </Link>
       </div>
     </div>
   );

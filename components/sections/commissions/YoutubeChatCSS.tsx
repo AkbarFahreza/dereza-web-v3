@@ -94,7 +94,7 @@ function YoutubeChatCSS() {
           </div>
           <Notice
             type="info"
-            message="You will get : CSS file and PDF for installation guide via Google Drive"
+            message="You will get : CSS file and PDF for guide"
           />
         </div>
       </div>
