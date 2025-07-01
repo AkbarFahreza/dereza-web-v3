@@ -56,7 +56,7 @@ async function getPortfolios() {
       ? "https://www.dereza.my.id"
       : "http://localhost:3000";
 
-  const res = await fetch(`${baseUrl}/api/portfolios`, {
+  const res = await fetch(`/api/portfolios`, {
     cache: "force-cache",
   });
 
