@@ -56,7 +56,7 @@ async function getPortfolios() {
       ? "https://dereza.my.id" // no www. if your deployed URL is without it
       : "http://localhost:3000";
 
-  const res = await fetch(`${baseUrl}/api/portfolios`, {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/portfolios", {
     cache: "force-cache",
   });
 
