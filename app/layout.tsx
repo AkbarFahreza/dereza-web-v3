@@ -53,10 +53,10 @@ export const metadata = {
 async function getPortfolios() {
   const baseUrl =
     process.env.NODE_ENV === "production"
-      ? "https://www.dereza.my.id"
+      ? "https://dereza.my.id" // no www. if your deployed URL is without it
       : "http://localhost:3000";
 
-  const res = await fetch(`/api/portfolios`, {
+  const res = await fetch(`${baseUrl}/api/portfolios`, {
     cache: "force-cache",
   });
 
@@ -66,13 +66,21 @@ async function getPortfolios() {
 
   return res.json();
 }
+
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const raw = await getPortfolios();
-  const portfolio = raw[0].data;
+  let portfolio = [];
+  try {
+    const raw = await getPortfolios();
+    portfolio = raw[0]?.data ?? [];
+  } catch (error) {
+    console.error("Portfolio fetch failed in layout", error);
+    portfolio = []; // Fallback to empty data to prevent build failure
+  }
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
