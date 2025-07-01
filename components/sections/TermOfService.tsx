@@ -160,7 +160,7 @@ type PaymentTerm = string;
 
 const PaymentTerms: PaymentTerm[] = [
   "Payment can be made in full at the end of the project completion.",
-  "Payment can be made via Dana (Virtual Account) / Trakteer for Infonesian, KO-FI / Paypal for international payment.",
+  "Payment can be made via Dana (Virtual Account) / Trakteer for Indonesian, KO-FI / Paypal for international payment.",
   "The package price listed above is the initial price and the price can increase depending on the difficulty of working.",
   "If there is a price increase, I will let you know after design .",
 ];

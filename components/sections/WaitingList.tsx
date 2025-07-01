@@ -60,11 +60,14 @@ export default function WaitingList() {
       <div className="mb-6 mt-6">
         {Object.entries(grouped).map(([listName, cards]) => (
           <div key={listName} className="mb-8">
-            <h1 className="mb-4 text-2xl text-main">{listName}</h1>
+            <h1 className="mb-4 text-base md:text-2xl text-main">{listName}</h1>
             {cards
               .filter((card) => card.name !== listName)
               .map((card) => (
-                <p key={card.id} className="font-semibold ml-6 mb-2 text-sm">
+                <p
+                  key={card.id}
+                  className="font-semibold ml-6 mb-2 text-xs md:text-base"
+                >
                   {card.name.match(/^(.*?-\d{2})/)?.[1]}
                 </p>
               ))}

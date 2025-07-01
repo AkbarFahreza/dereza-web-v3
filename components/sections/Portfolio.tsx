@@ -1,4 +1,5 @@
 import React from "react";
+import PortfolioList from "./portfolios/portfolio-list";
 
 function Portfolio() {
   return (
@@ -8,10 +9,7 @@ function Portfolio() {
           Portfolio
         </p>
       </div>
-      <p className="text-xs md:text-sm">
-        Feature is unavailable yet, please come back leter... or check to my
-        X/Twitter instead
-      </p>
+      <PortfolioList />
     </div>
   );
 }
