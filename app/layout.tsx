@@ -51,12 +51,19 @@ export const metadata = {
   },
 };
 async function getPortfolios() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/portfolios`,
-    {
-      cache: "force-cache",
-    }
-  );
+  const baseUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://www.dereza.my.id"
+      : "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/portfolios`, {
+    cache: "force-cache",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch portfolios");
+  }
+
   return res.json();
 }
 export default async function RootLayout({

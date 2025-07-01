@@ -1,6 +1,20 @@
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-const items = [
+type Portfolio = {
+  id: number;
+  name: string;
+  image: string;
+  sourceLink: string;
+  category: string;
+  Datecreated: string;
+};
+
+type Item = {
+  data: Portfolio[];
+};
+
+const items: Item[] = [
   {
     data: [
       {
@@ -45,7 +59,6 @@ const items = [
         image:
           "https://pbs.twimg.com/media/F14c4mraEAAyu_h?format=jpg&name=medium",
         sourceLink: "https://x.com/Revernry/status/1683815123906097155?s=20",
-        ytLink: "https://www.youtube.com/@Aisu_rain",
         category: "YT Chat Commissions",
         Datecreated: "July 2023",
       },
@@ -326,6 +339,6 @@ const items = [
 ];
 
 
-export async function GET() {
+export async function GET(_request: NextRequest) {
   return NextResponse.json(items);
 }
