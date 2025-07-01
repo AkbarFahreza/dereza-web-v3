@@ -325,6 +325,7 @@ const items = [
   },
 ];
 
-export async function GET(request) {
+
+export async function GET(request: Request) {
   return NextResponse.json(items);
 }
