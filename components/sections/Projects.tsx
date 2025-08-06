@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectList from "./projects/projectList";
 
 function Projects() {
   return (
@@ -8,6 +9,7 @@ function Projects() {
           Projects
         </p>
       </div>
+      <ProjectList />
     </div>
   );
 }

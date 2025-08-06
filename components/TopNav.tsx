@@ -29,9 +29,7 @@ function TopNav() {
   }, []);
   return (
     <div
-      className={`fixed top-0 py-2 md:py-3 flex flex-col w-full items-center justify-center  z-20 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-main/10 backdrop-brightness-[0.3]" : ""
-      }`}
+      className={`fixed top-0 py-2 md:py-3 flex flex-col w-full items-center justify-center  z-20 transition-all duration-300 `}
     >
       <ul
         className={`${roboto.className}  hidden md:flex flex-row items-center gap-8 w-full max-w-3xl text-base justify-center`}
@@ -56,7 +54,7 @@ function TopNav() {
           <Link href="#">Pricelist</Link>
         </li>
       </ul>
-      <div className="flex flex-col relative w-full ">
+      <div className={`flex flex-col relative w-full `}>
         <div className={`md:hidden flex flex-row justify-between px-6 `}>
           <Link
             href="#"
@@ -84,10 +82,10 @@ function TopNav() {
           </button>
         </div>
         <div
-          className={`absolute md:hidden -top-10 left-0 px-6 pt-6 w-full origin-top-left min-h-[120vh]  flex flex-col items-start justify-start transition-all duration-500 transform -z-50 ${
+          className={`absolute md:hidden -top-10 left-0 px-6 pt-6 w-full origin-top-left min-h-[120vh]  flex flex-col items-start justify-start transition-all duration-500 transform -z-50  bg-main/10 backdrop-brightness-[0.3] backdrop-blur-md ${
             isOpen
-              ? "translate-y-0 opacity-100 bg-main/10 backdrop-brightness-[0.3] backdrop-blur-md"
-              : "-translate-y-[200vh] opacity-0"
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-[200vh] opacity-0 "
           }`}
         >
           <div className="mt-24">{isOpen && <LeftMenu fn={toggleMenu} />}</div>

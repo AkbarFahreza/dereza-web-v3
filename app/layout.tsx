@@ -51,11 +51,6 @@ export const metadata = {
   },
 };
 async function getPortfolios() {
-  const baseUrl =
-    process.env.NODE_ENV === "production"
-      ? "https://dereza.my.id" // no www. if your deployed URL is without it
-      : "http://localhost:3000";
-
   const res = await fetch("https://dereza.my.id/api/portfolios", {
     cache: "no-store", // Disable caching for development
   });
@@ -86,7 +81,7 @@ export default async function RootLayout({
       <body
         className={`${cantataOne.variable} ${calistoga.variable} ${carattere.variable} ${cantataOne.className} antialiased max-w-screen overflow-x-hidden relative `}
       >
-        <ClientPortfolioProvider portfolios={portfolio}>
+        <ClientPortfolioProvider Portfolios={portfolio}>
           {children}
         </ClientPortfolioProvider>
       </body>

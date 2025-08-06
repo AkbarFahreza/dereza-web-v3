@@ -52,7 +52,7 @@ export default function Home() {
           <div id="term-of-service" className="min-h-screen pt-28">
             <TermOfService />
           </div>
-          <div id="portfolio" className="min-h-screen  pt-28">
+          <div id="portfolio" className="min-h-screen pt-28">
             <Portfolio />
           </div>
           <div id="waiting-list" className="min-h-screen  pt-28">

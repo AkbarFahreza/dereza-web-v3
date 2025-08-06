@@ -90,7 +90,6 @@ export default function PortfolioList() {
   const loadMore = () => {
     setVisibleCount((prev) => prev + 6);
   };
-
   return (
     <div>
       <div className="flex justify-between mt-6 items-center">
@@ -110,7 +109,7 @@ export default function PortfolioList() {
           <Link
             href={item.sourceLink}
             key={item.id}
-            className="hover:scale-[1.02] transition relative"
+            className="hover:scale-[1.02] transition relative rounded-lg overflow-hidden"
           >
             <img src={item.image} alt={item.name} className="w-full h-auto" />
             <p className="mt-2 font-semibold text-xs md:text-sm absolute bottom-0 left-0 px-3 pb-2 pt-20 text-main bg-gradient-to-t from-black to-transparent w-full">

@@ -40,7 +40,6 @@ function ProfileSection() {
 
   if (loading) return <div>Loading profile info...</div>;
   if (error) return <div className="text-red-500">Error: {error}</div>;
-  console.log(cards);
   return (
     <div className="flex flex-col jsutify-center align-bottom">
       <Image

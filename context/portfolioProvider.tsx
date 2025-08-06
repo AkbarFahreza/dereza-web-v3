@@ -15,13 +15,13 @@ export const usePortfolios = () => useContext(PortfolioContext);
 
 export default function ClientPortfolioProvider({
   children,
-  portfolios,
+  Portfolios,
 }: {
   children: React.ReactNode;
-  portfolios: Portfolio[];
+  Portfolios: Portfolio[];
 }) {
   return (
-    <PortfolioContext.Provider value={portfolios}>
+    <PortfolioContext.Provider value={Portfolios}>
       {children}
     </PortfolioContext.Provider>
   );
