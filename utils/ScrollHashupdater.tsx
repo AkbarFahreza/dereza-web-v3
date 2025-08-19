@@ -9,7 +9,7 @@ const SECTION_IDS = [
   "portfolio",
   "waiting-list",
   "projects",
-  "featuring",
+  "partners",
 ];
 
 type Props = {
@@ -32,7 +32,7 @@ export default function ScrollHashUpdater({ onHashChange }: Props) {
           }
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     SECTION_IDS.forEach((id) => {

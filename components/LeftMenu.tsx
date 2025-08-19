@@ -11,7 +11,7 @@ const MenuList = [
   { id: 3, name: "Portfolio", href: "#portfolio" },
   { id: 4, name: "Waiting list", href: "#waiting-list" },
   { id: 5, name: "Projects", href: "#projects" },
-  { id: 6, name: "Featuring", href: "#featuring" },
+  { id: 6, name: "Partners", href: "#partners" },
 ];
 
 function LeftMenu({
