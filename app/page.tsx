@@ -8,8 +8,8 @@ import SpinningDecor from "@/components/SpinningDecor";
 import TermOfService from "@/components/sections/TermOfService";
 import WaitingList from "@/components/sections/WaitingList";
 import Portfolio from "@/components/sections/Portfolio";
-import Featuring from "@/components/sections/Featuring";
 import Projects from "@/components/sections/Projects";
+import Partners from "@/components/sections/Partners";
 
 export default function Home() {
   return (
@@ -61,8 +61,8 @@ export default function Home() {
           <div id="projects" className="min-h-screen  pt-28">
             <Projects />
           </div>
-          <div id="featuring" className="min-h-screen  pt-28">
-            <Featuring />
+          <div id="partners" className="min-h-screen  pt-28">
+            <Partners />
           </div>
         </div>
         <div className="p-4 "></div>
